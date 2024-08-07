@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Press Start 2P', cursive;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      overflow: hidden;
+      display: flex;
+    }
+    #gameContainer {
+      display: flex;
+      height: 100vh;
+    }
+    #canvasContainer {
+      flex: 1;
+      height: 100%;
+      position: relative;
+    }
+    #gameStats {
+      margin-top: 16px;
+      width: 300px;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="gameContainer">
+    <div id="canvasContainer">
+      <!-- red container div -->
+      <!-- player health -->
+      <div>
+        <div></div>
+        <div id="playerHealth"></div>
+      </div>
+      <!-- timer -->
+      <div id="notimer"></div>
+      <!-- enemy health -->
+      <div>
+        <div></div>
+        <div id="enemyHealth"></div>
+      </div>
+      <div></div>
+      <div id="displayText"></div>
+  <canvas></canvas>
+    </div>
+    <!-- NES game menu -->
+    <div class="nes-container is-rounded is-dark"     style="background-color: #F9A2BF; height: 572px; width: 300px; font-size: x-small; ">
+    <div id="gameStats">
+      <div><h1><label>Stats:</label></h1></div>
+      <div><div ></div>
+      <div class="nes-table-responsive">
+        <div class="nes-table is-bordered is-dark" style="width: 240px; padding: 15px; margin-left: 0px; position: flex; background-color: #eea5bd; ">
+      <div>Current Street: </div>
+      <div id="currentStreet" style="background-color: green; margin: auto; white-space: nowrap; width: 120px; text-align: center; line-height: 0.8; padding-top: 0.6em; font-size: small; vertical-align: top; margin-top: 0px; height:  15px; color: white; font-family: sans-serif; font-weight: bold; padding: 0.25em 0.25em 0.4em 0.5em;  border-radius: 0.25em; box-shadow: 0 0 0 0.1em white, 0 0 0 calc(0.1em + 1px) var(--sign-color), 0.2em 0.2em 0.1em rgba(0, 0, 0, 0.25); box-shadow: 0 0 0 0.1em white;">First street</div> <div></div> 
+      <p></p>
+      <div id="streetsServed">Streets served: 0</div>
+      <div id="customersServed">Customers served: 0 </div>
+      <div id="moneyMade">$hmackos earned: 0</div>
+      <div id="score">Score: </div></div>
+    </div>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+
+          <thead>
+            <tr>
+      <div><h1><label style="margin-top: 60px">Menu:</label></h1>              </tr>            </thead>
+        <tbody>            </tbody>
+      </table>
+      <div class="nes-table is-bordered is-dark" style="width: 240px; padding: 15px; margin-left: 0px; position: flex; background-color: #eeaac1;">
+<div style = "text-align: left;">
+        <div>Strawberry: press s</div>
+        <div>Lemon: press l</div>
+        <div>Chocolate: press c</div>
+        <div>Vanilla: press v</div>
+        <table class="nes-table is-bordered is-dark" style="width: 200px; position: flex; background-color: #eeaac1;">
+          <thead>
+            <tr>
+      <div>        </tr>            </thead>
+        <tbody>            </tbody></table></div></div></div></div>
+
+ 
+  <div id="timer" style="position: relative;"></div>
+    </div></div>
+  </div>
+ 
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+    integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="js/utils.js"></script>
+  <script src="js/classes.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
